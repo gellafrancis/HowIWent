@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HowIWent</string>
+    <string name="signup"><u>Sign Up</u></string>
+    <string name="forgotpw"><u>Forgot password?</u></string>
+    <string name="mot">Mode of \nTransportation:</string>
+    <string name="fare">Fare (optional):</string>
+    <string name="comment">Ex. Jeep/bus sign card\nDirections\nNearby landmarks</string>
+    <string-array name="transpo_array">
+        <item>Jeep</item>
+        <item>Bus</item>
+        <item>FX</item>
+        <item>Taxi</item>
+        <item>Tricycle</item>
+        <item>Walk</item>
+    </string-array>
+</resources>

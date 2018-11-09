@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1048127181675",
+    "firebase_url": "https://howiwent-db058.firebaseio.com",
+    "project_id": "howiwent-db058",
+    "storage_bucket": "howiwent-db058.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048127181675:android:dc5b163e4dff097c",
+        "android_client_info": {
+          "package_name": "com.davidgella.howiwent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048127181675-po4eldd9kc32k08km0uf9bf92vvniuco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidgella.howiwent",
+            "certificate_hash": "3f8a8a49332635e140e885d2ae078f21bd8b341e"
+          }
+        },
+        {
+          "client_id": "1048127181675-u5f8du0i8lb96s3ejk4vlng76gct9i21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMPgzCBAKMI7mRzRztJXpIIh50r-WOmeQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048127181675-u5f8du0i8lb96s3ejk4vlng76gct9i21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
