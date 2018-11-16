@@ -57,6 +57,11 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    public void Back (View v) {
+        Intent i = new Intent(this,LoginActivity.class);
+        startActivity(i);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -72,6 +77,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         final String username = etUsername.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
         final String email = etEmail.getText().toString().trim();
+
 
 
 
@@ -111,8 +117,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
+                            String id = FirebaseAuth.getInstance().getCurrentUser().getUid();
                             // Sign in success, update UI with the signed-in user's information
-                            User user = new User (email, username);
+                            User user = new User (id,username,email);
 
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {

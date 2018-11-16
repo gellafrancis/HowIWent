@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ThankYouActivity extends AppCompatActivity implements View.OnClickListener {
+public class ThankYouActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,14 +15,9 @@ public class ThankYouActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.thankyoupage);
     }
 
-
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()){
-            case R.id.ivBack:
-                finish();
-                startActivity(new Intent(this,LoginActivity.class));
-                break;
-        }
+    public void Back (View v) {
+        finish();
+        Intent i = new Intent(this,LoginActivity.class);
+        startActivity(i);
     }
 }

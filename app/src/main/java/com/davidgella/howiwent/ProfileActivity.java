@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -49,15 +51,32 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     private void loadUserInformation() {
         FirebaseUser user = mAuth.getCurrentUser();
-       // String displayName = user.getEmail().toString();
 
-        if(user != null){
-            if(user.getEmail() != null){
-                tvUsername.setText(user.getEmail());
-//                myAuth.getCurrentUser().getUid()﻿
+        // Get a reference to our users
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+        Query query = reference.child("Users").orderByChild("id").equalTo(user.getUid());
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+
+                    for (DataSnapshot Users : dataSnapshot.getChildren()) {
+                        tvUsername.setText(Users.child("username").getValue().toString());
+//                        System.out.println("HEY: " + Users.child("username").getValue());
+                    }
+                }
             }
 
-        }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
 
      }
 

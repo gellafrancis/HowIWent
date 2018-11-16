@@ -78,7 +78,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="toProfile"
         android:text="Log In"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +116,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="toSignUp"
+        android:onClick=""
         android:text="@string/signup"
         android:textColor="@color/logoblue"
         android:textSize="18sp"
@@ -129,7 +128,7 @@
         app:layout_constraintVertical_bias="0.709" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -138,10 +137,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:onClick="toForgotPW"
         android:text="@string/forgotpw"
         android:textColor="@color/logoblue"
         android:textSize="18sp"
+        android:onClick=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"

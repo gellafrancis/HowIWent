@@ -13,4 +13,5 @@
         <item>Tricycle</item>
         <item>Walk</item>
     </string-array>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
 </resources>

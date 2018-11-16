@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -28,12 +29,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
 
+
         mAuth = FirebaseAuth.getInstance();
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
       findViewById(R.id.btnLogin).setOnClickListener(this);
       findViewById(R.id.tvSignUp).setOnClickListener(this);
-
+      findViewById(R.id.tvForgotPassword).setOnClickListener(this);
 
     }
 
@@ -42,6 +44,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch(v.getId()){
             case R.id.tvSignUp:
                 startActivity(new Intent(this, SignupActivity.class));
+                break;
+            case R.id.tvForgotPassword:
+                Log.i("HW", "Click forgot password");
+                startActivity(new Intent(this, ForgotPasswordActivity.class));
                 break;
             case R.id.btnLogin:
                 userLogin();
@@ -105,10 +111,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-//    public void toForgotPW (View v) {
-//        Intent i = new Intent(this,ForgotPWActivity.class);
-//        startActivity(i);
-//    }
+
 
 
 }
